@@ -1,0 +1,599 @@
+/*   ========= Google Fonts =============== */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+/* Global Variable */
+:root{
+    --sideBGColor: #353535;
+    --themeColor: #F95738;
+    --iconBGColor: #EE964B;
+    --textColor: #fff;
+    --bgColor: #D2D7DF;
+}
+body{
+    background-color: black;
+}
+/* -------------------------------------------------- */
+/* Cursur Animation */
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background-color:var(--themeColor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: 0;
+    animation-iteration-count: infinite;
+    display: none;
+    
+}
+
+/* -------------------------------------------------- */
+
+/* ============== Header section  Start===================== */
+
+/* ============================== Nav bar Start ================================== */
+.header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    background-color: var(--sideBGColor);
+}
+.header .nav-bar .nav-bar-items a{
+    margin-left: 40px;
+    color: var(--textColor);
+    text-decoration: none;
+    font-family: "Bai Jamjuree", serif;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+}
+.header .nav-bar a:hover{
+    color: var(--themeColor);
+}
+.header .nav-bar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--themeColor);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+    z-index: 99;
+}
+.header .nav-bar a:hover::after{
+    transform: scaleX(1);
+    z-index: 99;
+}
+.header .nav-bar .btn button{
+    font-family: "Bai Jamjuree", serif;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    padding: 1px;
+    width: 90px;
+    border-radius: 12px;
+    gap: 10px;
+}
+.header .nav-bar .btn button:hover{
+    background-color: var(--sideBGColor);
+    color: var(--themeColor);
+    border: 1px solid var(--themeColor);
+
+}
+/* ===Mobile Toggle=== */
+#MenuBtn{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    padding: 5px;
+    background-color: var(--themeColor);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,20%);
+    z-index: 999;
+    display: none;
+}
+
+/*  ============== mobile views ======================== */
+@media only screen and (max-width:760px){
+    .header .nav-bar{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 300px;
+        height: 500px;
+        left: -300px; 
+        z-index: 999;
+    }
+    .header .nav-bar .nav-bar-items{
+        
+        
+    }
+    .header .nav-bar .btn{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .header .nav-bar .btn button{
+        flex-direction: row;
+    }
+    #MenuBtn{
+        display: block;
+    }
+   
+}
+/* Mobile Toggle */
+.header .mobile-nav-active  {
+    left: 0;
+}
+/* ============================== Nav bar End ================================== */
+/* ============== Header section End===================== */
+
+
+/* ================================== Home Section Start===================================== */
+/*  ================= Background images =================== */
+#home{
+    width: 100%;
+   height: 580px;
+}
+ #home #imges{
+   width: 600px;
+   height: 500px;
+   border-radius: 20px;
+   background-size: contain;
+   position: relative;
+   margin-left: 700px;
+   margin-top: 40px;
+}
+
+
+#home h3{
+    position: absolute;
+    top: 30%;
+    left: 30px;
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    font-weight: 900;
+    color: var(--themeColor);
+    
+}
+#home h3 span{
+    position: absolute;
+    top: 20%;
+    left: 450px;
+    font-size: 60px;
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    color: var(--bgColor);
+}
+#home .auto-input{
+    margin-top: 40px;
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    font-family: "Nunito", serif;
+    font-size: 70px;
+    font-weight: 900;
+    color: var(--bgColor);
+}
+#home p{
+    width: 40vw;
+    margin-top: 40px;
+    position: absolute;
+    top: 60%;
+    left: 30px;
+    font-family: "Nunito", serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--bgColor);
+    white-space: pre-wrap; /* Allows text to wrap naturally */
+    overflow: hidden; /* Ensures only visible content is shown */
+    border-right: 0.15em solid var(--themeColor); /* Typing cursor effect */
+    letter-spacing: 0.015em;
+    line-height: 1.5; /* Adjust spacing between lines */
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from { 
+        border-color:  transparent; 
+    }
+    to {
+         border-color: var(--themeColor); 
+        }
+  }
+  /*  ============== mobile views ======================== */
+  @media only screen and (max-width:760px){
+    #home{
+        width: 100%;
+       height: 500px;
+    }
+    #home #imges{
+        width: 100%;
+        height:500px;
+        border-radius: 0;
+        filter: contrast(40%);
+        position: relative;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+    #home h3{
+        top: 20%;
+        left: 18%;
+        font-size: 5rem;
+        
+    }
+    #home h3 span{
+        top: 28%;
+       left: 108%;
+        font-size: 3rem;
+        color: black;
+    }
+    #home .auto-input{
+        font-size: 4rem;
+        top: 28%;
+        left: 18%;
+        color: black;
+    }
+    #home p{
+        width: 65%;
+        font-size: 1rem;
+        font-weight: 500;
+        top: 50%;
+        left: 18%;
+        color: black;
+    }
+  }
+/* ================================== Home Section End ===================================== */
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ================================== About Section Start ===================================== */
+#about{
+    height: 750px;
+    width: 100%;
+    margin-top: 0;
+    padding: 5px 70px;
+    position: relative;
+    background-color: #353535;
+}
+#about h2{
+    text-align: center;
+    margin: 20px 0 10px 20px;
+    font-family: "Bai Jamjuree", serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+}
+#about h2::after{
+    content: '';
+    position: absolute;
+    left: 45%;
+    bottom: -6px;
+    width: 100px;
+    height: 3px;
+    background: var(--themeColor);
+    border-radius: 5px;
+    transform: scaleX(1);
+    transition: .5s;
+    z-index: 99;
+}
+#about .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12em;
+    padding: 10px;
+    
+}
+#about .container .box{
+    position: relative;
+    height: 620px;
+    background-color: var(--textColor);
+    color: var(--sideBGColor);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+#about .container .box-1{
+    margin-left: 20px;
+    animation: rotatingwall1 2s ease-out ;
+}
+@keyframes rotatingwall1{
+    from{
+        left: -300px;
+    }
+    to{
+        left: 0;
+    }
+
+}
+#about .container .box-2{
+    margin-right: 80px;
+    animation: rotatingwall2 2s ease-out;
+}
+@keyframes rotatingwall2{
+    from{
+        right: -300px;
+    }
+    to{
+        right: 0;
+    }
+
+}
+#about .container .box .img-items img{
+    width: 25em;
+    height: 19em;
+    margin-bottom: 20px;
+}
+#about .container .box .info{
+    width: 25em;
+    height: 18em;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+#about .container .box .info p{
+    letter-spacing: .5px;
+    margin-bottom: 16px;
+}
+#about .container .box .info .para-1::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 56%;
+    width: 2px;
+    height: 110px;
+    background: black;
+    transform: scaleX(1);
+    transition: .5s;
+    z-index: 99;
+}
+#about .container .box .info .para-2::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 78%;
+    width: 2px;
+    height: 110px;
+    background: black;
+    transform: scaleX(1);
+    transition: .5s;
+    z-index: 99;
+}
+#about .container .box .info .dot-1{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: 9px;
+    top: 55%;
+    background-color: black;
+
+}
+
+#about .container .box .info .dot-2{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: 9px;
+    top: 78%;
+    background-color: black;
+
+}
+/* ====================================== Mobile View ==================================================== */
+@media only screen and (max-width:760px){
+    #about{
+        width: 100%;
+        height: 520px;
+        padding:5px  0;
+    }
+    #about .container{
+        gap: 2.5em;
+        padding: 10px;
+    }
+    #about h2{
+        font-size: 1.75rem;
+    }
+    #about .container .box{
+        width: 15.5em;
+        height: 400px;
+        padding: 10px;
+        border-radius: 8px;
+        
+    }
+    #about .container .box-1{
+         margin-left: 5px;
+    }
+    #about .container .box-2{
+          margin-right: 50px;
+    }
+    #about .container .box .img-items img{
+        width: 14em;
+        height: 10em;
+        margin-bottom: 20px;
+    }
+    #about .container .box .info{
+        width: 23em;
+        font-size: 10px;
+        font-weight: 400;
+        margin-left: 10px;
+    }
+    
+    #about .container .box .info .para-1::before{
+        left: 8px;
+        top: 49%;
+        height: 50px;
+        width: 1px;
+        height: 87px;
+    }
+    #about .container .box .info .para-2::before{
+        left: 8px;
+        top: 75%;
+        height: 50px;
+        width: 1px;
+        height: 87px;
+    }
+    #about .container .box .info .dot-1{
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        top: 49%;
+    }
+    
+    #about .container .box .info .dot-2{
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        top: 75%;
+    }
+}
+
+
+@media only screen and (max-width:565px){
+    #about{
+        width: 100%;
+        height: 520px;
+        padding:5px  0;
+    }
+    #about .container{
+        gap: 2.5em;
+        padding: 10px;
+    }
+    #about h2{
+        font-size: 1.75rem;
+    }
+    #about .container .box{
+        width: 15.5em;
+        height: 400px;
+        padding: 10px;
+        border-radius: 8px;
+        
+    }
+    #about .container .box-1{
+         margin-left: 5px;
+    }
+    #about .container .box-2{
+          margin-right: 50px;
+    }
+    #about .container .box .img-items img{
+        width: 14em;
+        height: 10em;
+        margin-bottom: 20px;
+    }
+    #about .container .box .info{
+        width: 23em;
+        font-size: 10px;
+        font-weight: 400;
+        margin-left: 10px;
+    }
+    
+    #about .container .box .info .para-1::before{
+        left: 8px;
+        top: 49%;
+        height: 50px;
+        width: 1px;
+        height: 87px;
+    }
+    #about .container .box .info .para-2::before{
+        left: 8px;
+        top: 75%;
+        height: 50px;
+        width: 1px;
+        height: 87px;
+    }
+    #about .container .box .info .dot-1{
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        top: 49%;
+    }
+    
+    #about .container .box .info .dot-2{
+        width: 10px;
+        height: 10px;
+        left: 4px;
+        top: 75%;
+    }
+}
+/* ================================== About Section End ===================================== */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* =================================  Footer start ======================================== */
+#footer{
+    width: 100%;
+    height: 200px;
+    background-color: #474646e6;
+    color: white;
+}
+#footer .upperbox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#footer .upperbox .box{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    padding: 10px 0;
+}
+#footer .upperbox .box-3 .socailHnadles{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#footer .upperbox .box a{
+    color: #D2D7DF;
+    text-decoration: none;
+}
+#footer .upperbox .box a:hover{
+    color: var(--themeColor);
+}
+#footer .lowerbox{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--bgColor);
+    padding: 10px 0;
+}
+
+#footer .lowerbox p,
+#footer .lowerbox a{
+    color: var(--textColor);
+    font-size: 20px;
+    text-decoration: none;
+}
+/* ==============================Mobile View =========================================== */
+@media only screen and (max-width:760px){
+    #footer .upperbox{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 17px;
+        padding: 5px 10px;
+    }
+}
+/* =================================  Footer End ======================================== */
+
