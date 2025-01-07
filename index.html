@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TMT</title>
+    <title>Krida Kaushal</title>
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,27 +18,30 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+  
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Cursur anumation -->
     <div class="cursor"></div>
-    <header class="header">
       <!--  =========== Nav Bar Start =================== -->
-      <nav class="nav-bar">
+      <header class="header">
+       <div class="header-items">
         <img src="img/logo.png" width="70px" height="70px" />
-        <div class="nav-bar-items">
-          <a href="#home">Home</a>
-          <a href="#">Sports</a>
-          <a href="#">Events</a>
-          <a href="#about">About Us</a>
-       
-          <div class="btn">
-            <button>Login</button>
-            <button>Sign Up</button>
+        <div class="nav-bar">
+          <div class="nav-bar-items">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+
+            <a href="#sports">Sports</a>
+            <a href="#about">About Us</a>
           </div>
-        </div>
-      </nav>
+            <div class="btn">
+              <a href="pages/login.html">Login</a>
+              <a href="pages/registration.html">Sign Up</a>
+            </div>
+          </div>
+      </div>
     </header>
     <!-- ======== Menu Bar  icon================== -->
     <i class="fa-solid fa-bars" id="MenuBtn"></i>
@@ -54,6 +58,202 @@
         <p id="typing"></p>
       </section>
       <!--   =================================== Home page  End ==================================== -->
+      <!-- ------------------------------------------------------------------------------------------------ -->
+       <!-- ================================== Event Section Starts =====================================  -->
+      <section id="events">
+        <div class="upcoming-events-section">
+          <div class="scroll_events">
+              <div class="section-header"> 
+                  <h1>Upcoming Events</h1>
+                  <a href="#" class="all-news-link">All Events →</a> 
+              </div>
+              <div class="sports-cards">
+                  <!-- Event Card 1 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/basketball1.webp" alt="Basketball Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Basketball</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Individual</span>
+                              <span>Tournaments</span>
+                              <span>State level</span>
+                          </div>
+                          <p class="event-name">By-Annual Intercollege Sports Fest 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Complex, Sunshine University, Hilltop Avenue, Cityville</p>
+                          <div class="date-button">
+                              <span class="date">January 15-17, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Event Card 2 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/football1.jpg" alt="Football Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Football</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Team</span>
+                              <span>International</span>
+                              <span>National level</span>
+                          </div>
+                          <p class="event-name">National Football Championship 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Navi Mumbai, Maharashtra, Kochi, Kerala</p>
+                          <div class="date-button">
+                              <span class="date">February 10-12, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Event Card 3 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/vollyball1.webp" alt="Volleyball Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Volleyball</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Team</span>
+                              <span>International</span>
+                              <span>Regional level</span>
+                          </div>
+                          <p class="event-name">By-Sunshine Volleyball League 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Sunshine Arena, Cityville</p>
+                          <div class="date-button">
+                              <span class="date">March 5-7, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Event Card 4 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/tennis.jpeg" alt="Tennis Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Tennis</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Individual</span>
+                              <span>International</span>
+                              <span>State level</span>
+                          </div>
+                          <p class="event-name">By-City Tennis Open 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Chennai Tennis Stadium, Chennai, Tamil Nadu</p>
+                          <div class="date-button">
+                              <span class="date">April 20-22, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Event Card 5 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/cricket1.webp" alt="Cricket Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Cricket</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Team</span>
+                              <span>National</span>
+                              <span>International level</span>
+                          </div>
+                          <p class="event-name">By-National Cricket Tournament 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Greenfield International Stadium, Thiruvananthapuram, Kerala</p>
+                          <div class="date-button">
+                              <span class="date">May 10-12, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Event Card 6 -->
+                  <div class="event-card">
+                      <div class="image-container">
+                          <img src="img/badminton.jpg" alt="Badminton Event" class="event-image">
+                          <div class="overlay"></div>
+                          <h2 class="event-title">Badminton</h2>
+                          <button class="share-button">&#x1F4E3;</button>
+                      </div>
+                      <div class="event-content">
+                          <div class="tags">
+                              <span>Individual</span>
+                              <span>National</span>
+                              <span>State level</span>
+                          </div>
+                          <p class="event-name">State Badminton Championship 2024</p>
+                          <p class="venue"><strong>Venue:</strong> Ekana Cricket Stadium, Lucknow</p>
+                          <div class="date-button">
+                              <span class="date">June 25-27, 2024</span>
+                              <button class="details-button">See Details</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>
+       <!-- ================================== Event Section End =====================================  -->
+      
+       <!-- --------------------------------------------------------------------------------------------------------------------->
+      <!--   =================================== Sports page  Start ==================================== -->
+      <section id="sports">
+        <div class="sports-section">
+          <div class="sports-header">Explore Sports</div>
+          <div class="carousel-container">
+              <div class="carousel" id="sports-carousel">
+                  <div class="carouselitem">
+                      <img src="img/Football.jpg" alt="Football">
+                      <h3>Football</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/Cricket.webp" alt="Cricket">
+                      <h3>Cricket</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/Badminton.jpeg" alt="Badminton">
+                      <h3>Badminton</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/Athletic.jpg" alt="Athletic">
+                      <h3>Athletic</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/kabaddi.png" alt="Kabaddi">
+                      <h3>Kabaddi</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/basketball.webp" alt="Basketball">
+                      <h3>Basketball</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/Tennis.jpg" alt="Tennis">
+                      <h3>Tennis</h3>
+                  </div>
+                  <div class="carouselitem">
+                      <img src="img/kho kho.webp" alt="kho kho">
+                      <h3>Kho Kho</h3>
+                  </div>
+                  <div class="carousel-controls">
+                      <button class="button" onclick="scrollCarousel('sports-carousel', -300)">←</button>
+                      <button class="button" onclick="scrollCarousel('sports-carousel', 300)">→</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+      <!--   =================================== Sports page  End ==================================== -->
       <!-- ------------------------------------------------------------------------------------------------ -->
       <!--   =================================== About page  Start ==================================== -->
       <section id="about">
@@ -145,6 +345,6 @@
     <!-- Typed.JS File (for Typing Effect) -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- =========== Script.js file ============== -->
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>

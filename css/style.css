@@ -12,7 +12,7 @@
 
 /* Global Variable */
 :root{
-    --sideBGColor: #353535;
+    --sideBGColor: #212121;
     --themeColor: #F95738;
     --iconBGColor: #EE964B;
     --textColor: #fff;
@@ -43,7 +43,7 @@ body{
 /* ============== Header section  Start===================== */
 
 /* ============================== Nav bar Start ================================== */
-.header .nav-bar{
+.header .header-items{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +52,12 @@ body{
     padding: 0 30px;
     background-color: var(--sideBGColor);
 }
-.header .nav-bar .nav-bar-items a{
+.header .header-items .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header .header-items .nav-bar .nav-bar-items a{
     margin-left: 40px;
     color: var(--textColor);
     text-decoration: none;
@@ -61,10 +66,10 @@ body{
     font-size: 18px;
     position: relative;
 }
-.header .nav-bar a:hover{
+.header .header-items .nav-bar .nav-bar-items a:hover{
     color: var(--themeColor);
 }
-.header .nav-bar a::after{
+.header .header-items .nav-bar .nav-bar-items a::after{
     content: '';
     position: absolute;
     left: 0;
@@ -77,25 +82,27 @@ body{
     transition: .5s;
     z-index: 99;
 }
-.header .nav-bar a:hover::after{
+.header .header-items .nav-bar .nav-bar-items a:hover::after{
     transform: scaleX(1);
     z-index: 99;
 }
-.header .nav-bar .btn button{
+.header .header-items .nav-bar .btn a{
     font-family: "Bai Jamjuree", serif;
     font-weight: 600;
     font-size: 18px;
-    border: none;
+    border: 2px solid var(--textColor);
     height: 32px;
-    padding: 1px;
-    width: 90px;
+    text-decoration: none;
+    padding: 3px 12px;
+    color: var(--textColor);
+    text-align: center;
     border-radius: 12px;
     gap: 10px;
 }
-.header .nav-bar .btn button:hover{
+.header .header-items .nav-bar .btn a:hover{
     background-color: var(--sideBGColor);
     color: var(--themeColor);
-    border: 1px solid var(--themeColor);
+    border: 2px solid var(--themeColor);
 
 }
 /* ===Mobile Toggle=== */
@@ -128,10 +135,10 @@ body{
         left: -300px; 
         z-index: 999;
     }
-    .header .nav-bar .nav-bar-items{
+    /* .header .nav-bar .nav-bar-items{
         
         
-    }
+    } */
     .header .nav-bar .btn{
         display: flex;
         justify-content: space-evenly;
@@ -270,14 +277,415 @@ body{
   }
 /* ================================== Home Section End ===================================== */
 /* ------------------------------------------------------------------------------------------------------------------- */
+  /* ==========================================  Events Section Starts ================================= */
+
+.behind_heading {
+    position: absolute;
+    opacity: 0.4;
+    font-size: 1.4rem;
+    color: var(--muted-color);
+  }
+  
+  .scroll_events {
+    padding: 20px;
+    position: relative;
+    top: 1.6rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .section-header {
+    border-left: 0.5rem var(--primary-color) solid;
+    padding-left: 0.8rem;
+  }
+  
+  .section-header h1{
+    text-align: left;
+    margin: 20px 0 10px 20px;
+    font-family: "Bai Jamjuree", serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: #fff;
+    position: relative;
+}
+.section-header h1::after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+    width: 200px;
+    height: 3px;
+    background: var(--themeColor);
+    border-radius: 5px;
+    transform: scaleX(1);
+    transition: .5s;
+    z-index: 99;
+}
+  .section-header a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--iconBGColor);
+    text-decoration: none;
+  }
+  
+  .section-header a:hover {
+    text-decoration: underline;
+    font-size: 1.3rem;
+    color: rgba(68, 152, 180, 0.923);
+  }
+  
+  /* Sports card container with scroll feature */
+  .sports-cards {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto; /* Horizontal scroll */
+    scroll-snap-type: x mandatory; /* Smooth snapping effect */
+    scrollbar-width: none;
+  }
+  
+  .event-card {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .event-card:hover {
+    transform: scale(1.05);  
+    border-color: var(--primary-color); 
+    transition: transform 0.3s ease, border-color 0.3s ease;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-title {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .share-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .share-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .event-content {
+    padding: 15px;
+  }
+  
+  .tags {
+    margin: 10px 0;
+  }
+  
+  .tags span {
+    display: inline-block;
+    background-color: var(--iconBGColor);
+    color: #333;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    font-size: 0.9em;
+    border-radius: 20px;
+  }
+  
+  .event-name {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  .venue {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .date-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .date {
+    font-weight: bold;
+    color: var(--themeColor);
+  }
+  
+  .details-button {
+    padding: 8px 12px;
+    background-color: var(--themeColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .details-button:hover {
+    background-color: var(--themeColor);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .pagination button:hover {
+    background-color: #444;
+  }
+   
+  @media (max-width:768px){
+    .behind_heading {
+     font-size: 0;
+      
+    }
+    .section-header h1 {
+      font-size: 1rem; 
+    } 
+    .section-header a {
+      font-size: 0.5rem; 
+    }
+  }
+  /* past events css */
+  .past-events {
+    margin-top: 2rem;
+  }
+  
+  .past-events .section-header {
+    border-left: 0.5rem var(--secondary-color) solid;
+    padding-left: 0.8rem;
+  }
+  
+  .past-events .section-header h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--secondary-color);
+  }
+  
+  .past-events .section-header a {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .past-events .section-header a:hover {
+    text-decoration: underline;
+  }
+  
+  .past-events .sports-cards {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Ensures cards wrap to new lines if needed */
+  }
+  
+  .past-events .event-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .past-events .event-card:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+  }
+  /* ==========================================  Events Section Ends ================================= */
+  /* ----------------------------------------------------------------------------------------------------------------------- */
+/* ================================== Sports Section Starts ===================================== */
+
+#sports .sports-section {
+            background-color: var(--sideBGColor);
+            font-family: Arial, sans-serif;
+            margin: 18px;
+            padding: 12px 50px;
+            border-radius: 5px;
+        }
+        #sports .sports-header {
+            text-align: left;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+        #sports .sports-header::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: #f95738;
+            transition: width 0.3s;
+        }
+        #sports  .sports-header:hover::after {
+            width: 120%;
+        }
+        #sports  .carousel-container {
+            position: relative;
+            width:100% ;
+            height: 66vh;
+        }
+        #sports .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 40px;
+            padding: 10px;
+            scroll-behavior: smooth;
+            height: 100%;
+            align-items: center;
+        }
+        #sports  .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        #sports  .carouselitem {
+            width: 300px;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            flex: 0 0 300px;
+            transition: flex 0.3s ease-in-out;
+        }
+        #sports .carouselitem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: filter 0.3s;
+        }
+        #sports .carouselitem h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #sports .carouselitem:hover h3 {
+            opacity: 1;
+        }
+        #sports .carouselitem:hover img {
+            filter: brightness(0.5);
+        }
+        #sports .carouselitem:hover {
+            flex: 0 0 350px;
+        }
+        #sports .carouselitem:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--themeColor);
+        }
+        #sports .carousel-controls {
+            position: absolute;
+            width: 96%;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        #sports .button {
+            cursor: pointer;
+            padding: 6px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            transition: background-color 0.3s;
+            pointer-events: auto;
+        }
+        #sports .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        
+/* ================================== Sports Section End ===================================== */
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+   
 /* ================================== About Section Start ===================================== */
 #about{
     height: 750px;
-    width: 100%;
-    margin-top: 0;
+    margin: 18px;
     padding: 5px 70px;
+    border-radius: 5px;
     position: relative;
-    background-color: #353535;
+    background-color: var(--sideBGColor);
 }
 #about h2{
     text-align: center;
@@ -323,7 +731,7 @@ body{
 }
 @keyframes rotatingwall1{
     from{
-        left: -300px;
+        left: -100px;
     }
     to{
         left: 0;
@@ -336,7 +744,7 @@ body{
 }
 @keyframes rotatingwall2{
     from{
-        right: -300px;
+        right: -100px;
     }
     to{
         right: 0;
@@ -546,7 +954,7 @@ body{
 #footer{
     width: 100%;
     height: 200px;
-    background-color: #474646e6;
+    background-color: var(--sideBGColor);
     color: white;
 }
 #footer .upperbox{

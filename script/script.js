@@ -116,3 +116,29 @@ document.addEventListener("DOMContentLoaded", () => {
   
     observer.observe(box2);
   });
+
+  // ============================Events Section  Start===================================================
+  // Dynamically set the color based on status text
+  document.addEventListener('DOMContentLoaded', () => {
+    const statusCells = document.querySelectorAll('.status');
+
+    statusCells.forEach(cell => {
+        const status = cell.textContent.trim().toLowerCase();
+
+        if (status === 'confirmed') {
+            cell.style.color = '#007bff'; // Blue
+        } else if (status === 'pending') {
+            cell.style.color = '#ffc107'; // Yellow
+        } else if (status === 'cancelled') {
+            cell.style.color = '#dc3545'; // Red
+        }
+    });
+});
+  // --------------------------------------------------------------------------------------------------------------------------
+  // ==============================================Sports Section Start
+  function scrollCarousel(id, amount) {
+    const carousel = document.getElementById(id);
+    carousel.scrollBy({ left: amount, behavior: 'smooth' });
+}
+
+
