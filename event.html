@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krida Kaushal</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <!-- ==================== Header Code and Navigation Bar ====================== -->
+    <header class="header">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <!-- Logo -->
+            <img src="img/logo.png" alt="Logo" width="70" height="70" />
+            <h1 class="logo-name"> Krida Kaushal</h1>
+            <!-- Hamburger Icon -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <!-- Navigation Items -->
+            <div class="nav-bar-items">
+                <a href="#home">Home</a>
+                <a href="#sports">Sports</a>
+                <a href="#events">Events</a>
+                <a href="#about">About Us</a>
+                <!-- Buttons -->
+                <div class="btn">
+                    <button type="button">Login</button>
+                    <button type="button">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =============== Main Body Code ========================= -->
+    <div class="event_container">
+        <!--================== Past Events HTML =================-->
+        <div class="past_events">
+            <div class="past-video">
+                <video id="eventVideo" muted autoplay loop>
+                    Your browser does not support the video tag.
+                    
+                </video>
+                
+        
+                <div class="event-overlay">
+                    <div class="overlay-flex-box">
+                        <h2 id="eventName" class="event-name">Football Championship 2024</h2>
+                        <div class="event-details">
+                            <p id="eventDate" class="event-detail" data-type="date"><strong>Date & Time:</strong> Jan 15, 2024, 5:00 PM</p>
+                            <p id="eventLocation" class="event-detail" data-type="location"><strong>Venue:</strong> National Stadium, Central Delhi</p>
+                            <p id="eventDescription" class="event-detail" data-type="description"><strong>Description:</strong> The most anticipated football match of the year.</p>
+                        </div>
+                    </div>
+        
+                    <div class="overlay-flex-box">
+                        <button class="highlights-button" onclick="toggleHighlights()">Highlights <span class="arrow">▼</span></button>
+                        <div class="event-highlights hidden">
+                            <h3>Highlights</h3>
+                            <ul id="highlightList">
+                                <!-- Highlight items will be dynamically added here -->
+                            </ul>
+                        </div>
+                        <a href="gallery.html" class="gallery-link">View Image Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+        <!--==================  Registered events html =======================  -->
+        <div class="registered-events">
+            <div class="section-header"> 
+                <h1>Registered Events</h1> 
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Event Name</th>
+                            <th>Status</th>
+                            <th>Player Name</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Football Championship</td>
+                            <td class="status">Confirmed</td>
+                            <td>John Doe</td>
+                            <td>Stadium A, City XYZ</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Basketball Tournament</td>
+                            <td class="status">Pending</td>
+                            <td>Jane Smith</td>
+                            <td>Sports Complex, City ABC</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Marathon 2025</td>
+                            <td class="status">Cancelled</td>
+                            <td>Mike Johnson</td>
+                            <td>Park Lane, City PQR</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--===============================  upcoming events html ======================-->
+        <div class="upcoming-events-section">
+            <div class="behind_heading">
+                <h1>Upcoming Events</h1>
+            </div>
+            <div class="scroll_events">
+                <div class="section-header"> 
+                    <h1>Upcoming Events</h1>
+                    <a href="#" class="all-news-link">All Events →</a> 
+                </div>
+                <div class="sports-cards">
+                    <!-- Event Card 1 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/basketball.webp" alt="Basketball Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Basketball</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Individual</span>
+                                <span>Tournaments</span>
+                                <span>State level</span>
+                            </div>
+                            <p class="event-name">By-Annual Intercollege Sports Fest 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Complex, Sunshine University, Hilltop Avenue, Cityville</p>
+                            <div class="date-button">
+                                <span class="date">January 15-17, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/football.webp" alt="Football Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Football</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Team</span>
+                                <span>International</span>
+                                <span>National level</span>
+                            </div>
+                            <p class="event-name">National Football Championship 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Navi Mumbai, Maharashtra, Kochi, Kerala</p>
+                            <div class="date-button">
+                                <span class="date">February 10-12, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/vollyball.webp" alt="Volleyball Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Volleyball</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Team</span>
+                                <span>International</span>
+                                <span>Regional level</span>
+                            </div>
+                            <p class="event-name">By-Sunshine Volleyball League 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Sunshine Arena, Cityville</p>
+                            <div class="date-button">
+                                <span class="date">March 5-7, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 4 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/tennis.jpeg" alt="Tennis Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Tennis</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Individual</span>
+                                <span>International</span>
+                                <span>State level</span>
+                            </div>
+                            <p class="event-name">By-City Tennis Open 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Chennai Tennis Stadium, Chennai, Tamil Nadu</p>
+                            <div class="date-button">
+                                <span class="date">April 20-22, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 5 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/cricket.webp" alt="Cricket Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Cricket</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Team</span>
+                                <span>National</span>
+                                <span>International level</span>
+                            </div>
+                            <p class="event-name">By-National Cricket Tournament 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Greenfield International Stadium, Thiruvananthapuram, Kerala</p>
+                            <div class="date-button">
+                                <span class="date">May 10-12, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Card 6 -->
+                    <div class="event-card">
+                        <div class="image-container">
+                            <img src="./assets/badminton.jpg" alt="Badminton Event" class="event-image">
+                            <div class="overlay"></div>
+                            <h2 class="event-title">Badminton</h2>
+                            <button class="share-button">&#x1F4E3;</button>
+                        </div>
+                        <div class="event-content">
+                            <div class="tags">
+                                <span>Individual</span>
+                                <span>National</span>
+                                <span>State level</span>
+                            </div>
+                            <p class="event-name">State Badminton Championship 2024</p>
+                            <p class="venue"><strong>Venue:</strong> Ekana Cricket Stadium, Lucknow</p>
+                            <div class="date-button">
+                                <span class="date">June 25-27, 2024</span>
+                                <button class="details-button">See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="footer">
+            <div class="upperbox">
+              <div class="box">
+                <h4>Nav</h4>
+                <a href="#home">Home</a>
+                <a href="#">Sports</a>
+                <a href="#">Events</a>
+                <a href="#about">About Us</a>
+              </div>
+              <div class="box">
+                  <h4>Designed by</h4>
+                  <a href="https://www.linkedin.com/in/pratibha-maurya20/">Pratibha Maurya</a>
+                  <a href="https://www.linkedin.com/in/pratik-singh-25b071282/">Pratik Singh</a>
+                  <a href="https://www.linkedin.com/in/pratyush-chauhan-824a37296/">Pratyush Chauhan</a>
+              </div>
+              <div class="box box-3">
+                <h4>Contect Us</h4>
+               <div class="socailHnadles">
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+                <a href=""><i class="fa-solid fa-phone"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+               </div>
+              </div>
+            </div>
+            <div class="lowerbox">
+              <p>
+                &copy; Copyright 2024
+                <a href="https//Krida Kaushal.xyz" target="blank">
+                  Krida Kaushal
+                </a>
+              </p>
+            </div>
+           </div>
+    </footer>
+    <script src="event.js"></script>
+</body>
+</html>
